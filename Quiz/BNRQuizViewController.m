@@ -10,29 +10,37 @@
 
 @interface BNRQuizViewController ()
 
+@property (nonatomic, weak) IBOutlet UILabel *questionLabel;
+@property (nonatomic, weak) IBOutlet UILabel *answerLabel;
+@property (nonatomic) int currentQuestionIndex;
+@property (nonatomic, copy) NSArray *questions;
+@property (nonatomic, copy) NSArray *answers;
 @end
 
 @implementation BNRQuizViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.questions = @[@"Q1: Whatever?",@"Q2: What is your quest?",@"Q3: Whos the boss?"];
+        self.answers = @[@"A1: Wevs",@"A2: To find the holy grail",@"A3: You are"];
     }
     return self;
 }
 
-- (void)viewDidLoad
+-(IBAction)showQuestion:(id)sender
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.currentQuestionIndex++;
+    
+    if (self.currentQuestionIndex == [self.questions count]) {
+        self.currentQuestionIndex = 0;
+    }
+    self.questionLabel.text = self.questions[self.currentQuestionIndex];
+    self.answerLabel.text = @"???";
 }
-
-- (void)didReceiveMemoryWarning
+-(IBAction)showAnswer:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.answerLabel.text = self.answers[self.currentQuestionIndex];
 }
-
 @end
