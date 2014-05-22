@@ -19,6 +19,8 @@
 		E3957C65192D95FF00E02B3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3957C4D192D95FF00E02B3C /* UIKit.framework */; };
 		E3957C6D192D95FF00E02B3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E3957C6B192D95FF00E02B3C /* InfoPlist.strings */; };
 		E3957C6F192D95FF00E02B3C /* QuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E3957C6E192D95FF00E02B3C /* QuizTests.m */; };
+		E3D748E1192E3E8C00578660 /* BNRQuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D748DF192E3E8C00578660 /* BNRQuizViewController.m */; };
+		E3D748E2192E3E8C00578660 /* BNRQuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D748E0192E3E8C00578660 /* BNRQuizViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		E3957C6A192D95FF00E02B3C /* QuizTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuizTests-Info.plist"; sourceTree = "<group>"; };
 		E3957C6C192D95FF00E02B3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E3957C6E192D95FF00E02B3C /* QuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizTests.m; sourceTree = "<group>"; };
+		E3D748DE192E3E8C00578660 /* BNRQuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRQuizViewController.h; path = Quiz/BNRQuizViewController.h; sourceTree = "<group>"; };
+		E3D748DF192E3E8C00578660 /* BNRQuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRQuizViewController.m; path = Quiz/BNRQuizViewController.m; sourceTree = "<group>"; };
+		E3D748E0192E3E8C00578660 /* BNRQuizViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BNRQuizViewController.xib; path = Quiz/BNRQuizViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,7 @@
 			children = (
 				E3957C58192D95FF00E02B3C /* BNRAppDelegate.h */,
 				E3957C59192D95FF00E02B3C /* BNRAppDelegate.m */,
+				E3D748E3192E3E9300578660 /* QuizViewController */,
 				E3957C5B192D95FF00E02B3C /* Images.xcassets */,
 				E3957C50192D95FF00E02B3C /* Supporting Files */,
 			);
@@ -142,6 +148,17 @@
 				E3957C6B192D95FF00E02B3C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3D748E3192E3E9300578660 /* QuizViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3D748DE192E3E8C00578660 /* BNRQuizViewController.h */,
+				E3D748DF192E3E8C00578660 /* BNRQuizViewController.m */,
+				E3D748E0192E3E8C00578660 /* BNRQuizViewController.xib */,
+			);
+			name = QuizViewController;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3957C54192D95FF00E02B3C /* InfoPlist.strings in Resources */,
+				E3D748E2192E3E8C00578660 /* BNRQuizViewController.xib in Resources */,
 				E3957C5C192D95FF00E02B3C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +260,7 @@
 			files = (
 				E3957C56192D95FF00E02B3C /* main.m in Sources */,
 				E3957C5A192D95FF00E02B3C /* BNRAppDelegate.m in Sources */,
+				E3D748E1192E3E8C00578660 /* BNRQuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +457,7 @@
 				E3957C74192D95FF00E02B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3957C75192D95FF00E02B3C /* Build configuration list for PBXNativeTarget "QuizTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +466,7 @@
 				E3957C77192D95FF00E02B3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
